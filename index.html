@@ -2,10 +2,23 @@
 <html>
     <head>
         <title>JS - Clock</title>
+        
+        <style>
+            body{
+                background-color: red;
+            }
+            .clock{
+                postiton: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translate(-50%);
+                color: royalblue;
+            }
+        </style>
     </head>
     <body>
     <div id ="MyClockDisplay"></div>
-    <script type="text/javascript">
+    <script type ="text/javascript">
     
         function showTime(){
             var date = new Date();
@@ -14,7 +27,7 @@
             var s = date.getSeconds();
             var session = "AM";
 
-            if(h === 0){
+            if(h == 0){
                 h = 12;
             }
 
