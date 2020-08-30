@@ -10,18 +10,18 @@
         function showTime() {
             var date = new Date();
             var h = date.getHours();
-            var m = date.getminutes();
-            var s = date.getseconds();
+            var m = date.getMinutes();
+            var s = date.getSeconds();
             
             var time = h + ":" + m + ":" + s;
-            document.getElementById('MyClockDisplay').innertext = time;
-            document.getElementById('MyClockDisplay').innerContext = time;
+            document.getElementById("MyClockDisplay").innertext = time;
+            document.getElementById("MyClockDisplay").innerContext = time;
 
             setTimeout(showTime, 1000);
         }
 
-        //showTime();
-        setInterval(showTime, 1000);
+        showTime();
+        //setInterval(showTime, 1000);
     </script>
     </body>
 </html>
