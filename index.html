@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS - Clock</title>
+    </head>
+    <body>
+    <div id ="MyClockDisplay"></div>
+    <script type="text/javascript">
+    
+        function showTime() {
+            var date = new Date();
+            var h = date.getHours();
+            var m = date.getminutes();
+            var s = date.getseconds();
+            
+            var time = h + ":" + m + ":" + s;
+            document.getElementById('MyClockDisplay').innertext = time;
+            document.getElementById('MyClockDisplay').innerContext = time;
+
+            setTimeout(showTime, 1000);
+        }
+
+        //showTime();
+        setInterval(showTime, 1000);
+    </script>
+    </body>
+</html>
