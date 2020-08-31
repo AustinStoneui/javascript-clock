@@ -2,23 +2,25 @@
 <html>
     <head>
         <title>JS - Clock</title>
-        
         <style>
             body{
                 background-color: red;
             }
             .clock{
-                postiton: absolute;
+                position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translateX(-50%) translate(-50%);
                 color: royalblue;
+                font-size: 80px;
+                border: 1px solid;
+                padding:0 5px 0 5px;
             }
         </style>
     </head>
     <body>
-    <div id ="MyClockDisplay"></div>
-    <script type ="text/javascript">
+    <div id="MyClockDisplay" class="clock"></div>
+    <script type="text/javascript">
     
         function showTime(){
             var date = new Date();
@@ -33,6 +35,7 @@
 
             if(h > 12){
                 h = h - 12;
+            var session = "PM";
             }
 
             h = (h < 10) ? "0" + h : h;
@@ -40,8 +43,8 @@
             s = (s < 10) ? "0" + s : s;
             
             var time = h + ":" + m + ":" + s;
-            document.getElementById("MyClockDisplay").innertext = time;
-            document.getElementById("MyClockDisplay").innerContext = time;
+            document.getElementById('MyClockDisplay').innertext = time;
+            document.getElementById('MyClockDisplay').innerContext = time;
 
             setTimeout(showTime, 1000);
         }
@@ -51,3 +54,7 @@
     </script>
     </body>
 </html>
+
+
+
+
