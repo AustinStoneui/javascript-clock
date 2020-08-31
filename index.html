@@ -30,11 +30,11 @@
             var session = "AM";
 
             if(h == 0){
-                h = 12;
+               h = 12;
             }
 
             if(h > 12){
-                h = h - 12;
+               h = h - 12;
             var session = "PM";
             }
 
@@ -43,14 +43,14 @@
             s = (s < 10) ? "0" + s : s;
             
             var time = h + ":" + m + ":" + s;
-            document.getElementById('MyClockDisplay').innertext = time;
-            document.getElementById('MyClockDisplay').innerContext = time;
+            document.getElementById('MyClockDisplay').innerText = time;
+            document.getElementById('MyClockDisplay').innerContent = time;
 
             setTimeout(showTime, 1000);
         }
 
-        showTime();
-        //setInterval(showTime, 1000);
+        //showTime();
+        setInterval(showTime, 1000);
     </script>
     </body>
 </html>
